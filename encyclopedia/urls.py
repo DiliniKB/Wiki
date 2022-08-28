@@ -5,5 +5,6 @@ from . import views
 app_name = 'encyclopedia'
 urlpatterns = [
     path("", views.index, name="index"),
-    path("<str:page>", views.page, name="page")
+    path("view/<str:page>", views.page, name="page"),
+    path("create", views.create , name="create")
 ]
