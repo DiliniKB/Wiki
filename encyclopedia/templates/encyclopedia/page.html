@@ -3,7 +3,10 @@
 {% block title %}
     {{ title }}
 {% endblock %}
+    
+<!-- <a href="{% url 'encyclopedia:edit' title=title%}">Edit Page</a> -->
 
 {% block body %}
    {{ content|safe }}
+   <a href="{% url 'encyclopedia:edit' page=title %}">Edit Page</a>
 {% endblock %}
